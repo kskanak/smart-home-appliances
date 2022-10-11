@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../layout/Root";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,8 +57,10 @@ const Header = () => {
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               <div className="relative">
-                <p> Cart</p>
-                <p className="absolute bottom-3 left-7"> {cart.length}</p>
+                <FontAwesomeIcon icon={faCartShopping} />
+                <p className="absolute bottom-3 left-5 bg-orange-500 px-2 py3 rounded text-white">
+                  {cart.length}
+                </p>
               </div>
             </Link>
           </li>
@@ -153,9 +157,8 @@ const Header = () => {
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         <div className="relative">
-                          <p> Cart</p>
-                          <p className="absolute bottom-3 left-7">
-                            {" "}
+                          <FontAwesomeIcon icon={faCartShopping} />
+                          <p className="absolute bottom-3 left-5 bg-orange-500 px-2 py3 rounded text-white">
                             {cart.length}
                           </p>
                         </div>

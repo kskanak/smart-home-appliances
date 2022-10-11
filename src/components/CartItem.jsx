@@ -29,7 +29,7 @@ const CartItem = ({ product, handlerRemove }) => {
             <button
               onClick={() => handlerRemove(product)}
               type="button"
-              className="flex items-center px-2 py-1 pl-0 space-x-1"
+              className="flex items-center px-2 py-1 pl-0 space-x-1 text-red-700 font-semibold"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
